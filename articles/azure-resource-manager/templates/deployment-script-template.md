@@ -1,5 +1,5 @@
 ---
-title: Use deployment scripts in templates | Microsoft Docs
+title: Use deployment scripts in ARM templates | Microsoft Docs
 description: use deployment scripts in Azure Resource Manager templates.
 services: azure-resource-manager
 author: mumian
@@ -9,9 +9,10 @@ ms.date: 02/24/2020
 ms.author: jgao
 
 ---
-# Use deployment scripts in templates (Preview)
+# Use deployment scripts in ARM templates (Preview)
+There are often scenarios where you need to run custom script code in an ARM Template deployments to complete your environment setup. These scripts that previously required a step outside of a template deployment can now be executed inside of a template deployment using the deploymentScript resource. With the new deploymentScript resource will execute any PowerShell or Bash script as part of your template deployment. This script can be included as part of your ARM Template or referenced from an external source. DeploymentScripts now gives you the ability to complete your end-to-end environment setup in a single ARM Template. 
 
-Learn how to use deployment scripts in Azure Resource templates. With a new resource type called `Microsoft.Resources/deploymentScripts`, users can execute deployment scripts in template deployments and review execution results. These scripts can be used for performing custom steps such as:
+With a new resource type called `Microsoft.Resources/deploymentScripts`, users can execute deployment scripts in template deployments and review execution results. These scripts can be used for performing custom steps such as:
 
 - add users to a directory
 - create an app registration
